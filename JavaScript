@@ -1,0 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click event to navigation items
+    const navItems = document.querySelectorAll('.nav-categories a');
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Remove active class from all items
+            navItems.forEach(nav => nav.classList.remove('active'));
+            // Add active class to clicked item
+            this.classList.add('active');
+        });
+    });
+
+    // Add hover effect to book cards for additional interactivity
+    const bookCards = document.querySelectorAll('.book-card, .recommended-book');
+    bookCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = this.classList.contains('book-card') ?
+                'translateY(-8px) scale(1.02)' :
+                'scale(1.05)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+});
