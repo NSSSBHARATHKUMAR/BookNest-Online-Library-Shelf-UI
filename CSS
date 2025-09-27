@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+:root {
+    --wood-dark: #8B4513;
+    --wood-medium: #A0522D;
+    --wood-light: #DEB887;
+    --cream: #F5F5DC;
+    --beige: #F5E6D3;
+    --text-dark: #3E2723;
+    --text-light: #5D4037;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(to bottom, var(--wood-dark), var(--wood-medium));
+    color: var(--cream);
+    padding: 2rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--wood-light);
+}
+
+.logo i {
+    color: var(--wood-light);
+}
+
+.nav-categories {
+    list-style: none;
+}
+
+.nav-categories li {
+    margin-bottom: 1.2rem;
+}
+
+.nav-categories a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.nav-categories a:hover,
+.nav-categories a.active {
+    background-color: var(--wood-light);
+    color: var(--text-dark);
+    transform: translateX(5px);
+}
+
+.nav-categories i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem 3rem;
+}
+
+/* Banner Section */
+.banner {
+    background: linear-gradient(135deg, var(--wood-medium) 0%, var(--wood-light) 100%);
+    color: var(--cream);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="white" stroke-width="2"/></svg>') repeat;
+    transform: rotate(30deg);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    max-width: 700px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    color: var(--text-dark);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--wood-light);
+    display: inline-block;
+}
+
+/* Books Grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.book-card {
+    background-color: var(--beige);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+    height: 220px;
+    background: linear-gradient(135deg, var(--wood-medium) 0%, var(--wood-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="white" stroke-width="2"/></svg>') repeat;
+}
+
+.book-info {
+    padding: 1.5rem;
+}
+
+.book-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.book-author {
+    color: var(--text-light);
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.book-genre {
+    display: inline-block;
+    background-color: var(--wood-medium);
+    color: var(--cream);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    margin: 0.8rem 0;
+}
+
+.star {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+.star.filled {
+    color: #FFD700;
+}
+
+/* Recommended Reads */
+.recommended-section {
+    margin-bottom: 3rem;
+}
+
+.recommended-books {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1.5rem 0.5rem;
+    scrollbar-width: thin;
+}
+
+.recommended-books::-webkit-scrollbar {
+    height: 8px;
+}
+
+.recommended-books::-webkit-scrollbar-thumb {
+    background-color: var(--wood-medium);
+    border-radius: 4px;
+}
+
+.recommended-book {
+    min-width: 200px;
+    background-color: var(--beige);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.recommended-book:hover {
+    transform: scale(1.03);
+}
+
+.recommended-cover {
+    height: 140px;
+    background: linear-gradient(135deg, var(--wood-medium) 0%, var(--wood-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.recommended-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="white" stroke-width="2"/></svg>') repeat;
+}
+
+.recommended-info {
+    padding: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 240px;
+    }
+
+    .main-content {
+        margin-left: 240px;
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1.5rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        padding: 1.5rem;
+    }
+
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Additional Styling for Realism */
+.book-count {
+    display: inline-block;
+    background-color: var(--wood-light);
+    color: var(--text-dark);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.book-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--wood-dark), var(--wood-medium));
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--wood-light);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
