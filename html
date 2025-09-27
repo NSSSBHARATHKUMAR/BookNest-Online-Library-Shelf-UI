@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - Your Personal Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" aria-label="Main navigation">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>BookNest</span>
+            </div>
+            <ul class="nav-categories">
+                <li><a href="#fiction" class="active"><i class="fas fa-hat-wizard"></i> Fiction <span class="book-count">128</span></a></li>
+                <li><a href="#non-fiction"><i class="fas fa-globe"></i> Non-Fiction <span class="book-count">95</span></a></li>
+                <li><a href="#self-help"><i class="fas fa-hands-helping"></i> Self-Help <span class="book-count">63</span></a></li>
+                <li><a href="#tech"><i class="fas fa-laptop-code"></i> Tech <span class="book-count">47</span></a></li>
+                <li><a href="#history"><i class="fas fa-landmark"></i> History <span class="book-count">72</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Banner Section -->
+            <section class="banner" aria-labelledby="banner-heading">
+                <div class="banner-content">
+                    <h1 id="banner-heading">Welcome to Your Personal Library</h1>
+                    <p>Discover new worlds, expand your knowledge, and track your current reading journey with BookNest. Curate your own digital bookshelf and never lose track of your favorite reads.</p>
+                </div>
+            </section>
+
+            <!-- Books Grid -->
+            <h2 class="section-title">Currently Reading</h2>
+            <div class="books-grid">
+                <!-- Book Card 1 -->
+                <article class="book-card">
+                    <div class="book-cover" aria-label="Book cover for The Great Gatsby">The Great Gatsby</div>
+                    <div class="book-info">
+                        <h3 class="book-title">The Great Gatsby</h3>
+                        <p class="book-author">F. Scott Fitzgerald</p>
+                        <span class="book-genre">Classic Fiction</span>
+                        <div class="star-rating" aria-label="Rated 4 out of 5 stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book Card 2 -->
+                <article class="book-card">
+                    <div class="book-cover" aria-label="Book cover for Atomic Habits">Atomic Habits</div>
+                    <div class="book-info">
+                        <h3 class="book-title">Atomic Habits</h3>
+                        <p class="book-author">James Clear</p>
+                        <span class="book-genre">Self-Help</span>
+                        <div class="star-rating" aria-label="Rated 5 out of 5 stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book Card 3 -->
+                <article class="book-card">
+                    <div class="book-cover" aria-label="Book cover for Sapiens">Sapiens</div>
+                    <div class="book-info">
+                        <h3 class="book-title">Sapiens: A Brief History of Humankind</h3>
+                        <p class="book-author">Yuval Noah Harari</p>
+                        <span class="book-genre">History</span>
+                        <div class="star-rating" aria-label="Rated 4 out of 5 stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book Card 4 -->
+                <article class="book-card">
+                    <div class="book-cover" aria-label="Book cover for Clean Code">Clean Code</div>
+                    <div class="book-info">
+                        <h3 class="book-title">Clean Code: A Handbook of Agile Software Craftsmanship</h3>
+                        <p class="book-author">Robert C. Martin</p>
+                        <span class="book-genre">Technology</span>
+                        <div class="star-rating" aria-label="Rated 5 out of 5 stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Recommended Reads -->
+            <section class="recommended-section" aria-labelledby="recommended-heading">
+                <h2 class="section-title" id="recommended-heading">Recommended Reads</h2>
+                <div class="recommended-books">
+                    <!-- Recommended Book 1 -->
+                    <article class="recommended-book">
+                        <div class="recommended-cover" aria-label="Book cover for To Kill a Mockingbird">To Kill a Mockingbird</div>
+                        <div class="recommended-info">
+                            <h3 class="book-title">To Kill a Mockingbird</h3>
+                            <p class="book-author">Harper Lee</p>
+                            <span class="book-genre">Fiction</span>
+                        </div>
+                    </article>
+
+                    <!-- Recommended Book 2 -->
+                    <article class="recommended-book">
+                        <div class="recommended-cover" aria-label="Book cover for Deep Work">Deep Work</div>
+                        <div class="recommended-info">
+                            <h3 class="book-title">Deep Work</h3>
+                            <p class="book-author">Cal Newport</p>
+                            <span class="book-genre">Self-Help</span>
+                        </div>
+                    </article>
+
+                    <!-- Recommended Book 3 -->
+                    <article class="recommended-book">
+                        <div class="recommended-cover" aria-label="Book cover for The Innovators">The Innovators</div>
+                        <div class="recommended-info">
+                            <h3 class="book-title">The Innovators</h3>
+                            <p class="book-author">Walter Isaacson</p>
+                            <span class="book-genre">Technology</span>
+                        </div>
+                    </article>
+
+                    <!-- Recommended Book 4 -->
+                    <article class="recommended-book">
+                        <div class="recommended-cover" aria-label="Book cover for Guns, Germs, and Steel">Guns, Germs, and Steel</div>
+                        <div class="recommended-info">
+                            <h3 class="book-title">Guns, Germs, and Steel</h3>
+                            <p class="book-author">Jared Diamond</p>
+                            <span class="book-genre">History</span>
+                        </div>
+                    </article>
+
+                    <!-- Recommended Book 5 -->
+                    <article class="recommended-book">
+                        <div class="recommended-cover" aria-label="Book cover for Thinking, Fast and Slow">Thinking, Fast and Slow</div>
+                        <div class="recommended-info">
+                            <h3 class="book-title">Thinking, Fast and Slow</h3>
+                            <p class="book-author">Daniel Kahneman</p>
+                            <span class="book-genre">Non-Fiction</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>BookNest &copy; 2023 | Your personal digital library</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+    </script>
+</body>
+
+</html>
